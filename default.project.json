@@ -1,0 +1,69 @@
+{
+  "name": "CIA-SAC-ROBLOX",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "GAME_FRAMEWORK_SHARED": {
+        "$path": "src/GAME_FRAMEWORK_SHARED"
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.38823,
+            0.37254,
+            0.38823
+          ],
+          "Locked": true,
+          "Position": [
+            0,
+            -40,
+            0
+          ],
+          "Size": [
+            512,
+            20,
+            512
+          ],
+          "Transparency": 1
+        }
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "Ambient": [
+          0,
+          0,
+          0
+        ],
+        "Brightness": 2,
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "ShadowMap"
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
+  }
+}
