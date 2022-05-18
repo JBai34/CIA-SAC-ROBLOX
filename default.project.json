@@ -3,24 +3,30 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
       "GAME_FRAMEWORK_SHARED": {
+        "$ignoreUnknownInstances": true,
         "$path": "src/GAME_FRAMEWORK_SHARED"
       },
       "GAME_FRAMEWORK_REP": {
+        "$ignoreUnknownInstances": true,
         "$path": "src/GAME_FRAMEWORK_REP"
       },
       "Loadout_System": {
+        "$ignoreUnknownInstances": true,
         "$path": "src/GAME_FRAMEWORK_SHARED/Loadout_System"
       }
     },
     "ServerScriptService": {
       "Server": {
+        "$ignoreUnknownInstances": true,
         "$path": "src/server"
       }
     },
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
+          "$ignoreUnknownInstances": true,
           "$path": "src/client"
         }
       }
@@ -54,6 +60,7 @@
       }
     },
     "Lighting": {
+      "$ignoreUnknownInstances": true,
       "$properties": {
         "Ambient": [
           0,
@@ -67,6 +74,7 @@
       }
     },
     "SoundService": {
+      "$ignoreUnknownInstances": true,
       "$properties": {
         "RespectFilteringEnabled": true
       }
