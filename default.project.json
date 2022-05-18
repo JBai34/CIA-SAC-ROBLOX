@@ -3,8 +3,11 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/shared"
+      "GAME_FRAMEWORK_SHARED": {
+        "$path": "src/GAME_FRAMEWORK_SHARED"
+      },
+      "GAME_FRAMEWORK_REP": {
+        "$path": "src/GAME_FRAMEWORK_REP"
       }
     },
     "ServerScriptService": {
