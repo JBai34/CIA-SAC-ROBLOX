@@ -8,6 +8,9 @@
       },
       "GAME_FRAMEWORK_REP": {
         "$path": "src/GAME_FRAMEWORK_REP"
+      },
+      "Loadout_System": {
+        "$path": "src/GAME_FRAMEWORK_SHARED/Loadout_System"
       }
     },
     "ServerScriptService": {
