@@ -1,3 +1,5 @@
+local HVTAssets = game:GetService("ServerStorage").Assets.HVT_Assets
+
 local function Weld(elementToWeld:BasePart|Model,weldToPart:BasePart)
 	local weld = Instance.new("Weld")
 	
@@ -59,7 +61,7 @@ end
 local function Choose_Blindfold()
 	local newBlindfold
 	local rng = Random.new()
-	for _,model in pairs(script:GetChildren()) do
+	for _,model in pairs(HVTAssets:GetChildren()) do
 		if model:IsA("Model") then
 			newBlindfold = (rng:NextNumber() < 1/2 and model:Clone()) or nil
 			if newBlindfold then 
@@ -92,7 +94,7 @@ local function Kidnap_Player(playerToKidnap:Player)
 	Weld(newBlindfold.Middle,character.Head)
 	newBlindfold:PivotTo(character.Head:GetPivot())
 	
-	local newProximity = script.HVT_Proximity:Clone()
+	local newProximity = HVTAssets.HVT_Proximity:Clone()
 	newProximity.Parent = character
 	newProximity.Transparency = 1
 	Weld(newProximity,character.Torso)
@@ -102,7 +104,7 @@ local function Kidnap_Player(playerToKidnap:Player)
 	character.Torso["Right Shoulder"].C1 = CFrame.new(-0.5, 0.5, 0, 0.804728329, -0.219846249, 0.551434278, -0.33158803, 0.604022622, 0.724710822, -0.492403805, -0.766044438, 0.413175792)
 	
 	--// Clone the GUI
-	local newGui = script.HVTGUI:Clone()
+	local newGui = HVTAssets.HVTAssets:Clone()
 	newGui.Parent = playerToKidnap.PlayerGui
 	newGui.Enabled = true
 	
