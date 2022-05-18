@@ -9,7 +9,7 @@
     },
     "ServerScriptService": {
       "Server": {
-        "$path": "src"
+        "$path": "src/server"
       }
     },
     "StarterPlayer": {
