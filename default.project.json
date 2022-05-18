@@ -11,10 +11,6 @@
       "GAME_FRAMEWORK_REP": {
         "$ignoreUnknownInstances": true,
         "$path": "src/GAME_FRAMEWORK_REP"
-      },
-      "Loadout_System": {
-        "$ignoreUnknownInstances": true,
-        "$path": "src/GAME_FRAMEWORK_SHARED/Loadout_System"
       }
     },
     "ServerScriptService": {
