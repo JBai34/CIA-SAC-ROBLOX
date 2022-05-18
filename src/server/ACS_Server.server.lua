@@ -30,7 +30,7 @@ local Ragdoll		= require(Mods:WaitForChild("Ragdoll"))
 local ACS_0 		= HttpService:GenerateGUID(true)
 local Backup 		= 0
 
-_G.TempBannedPlayers = {} --Local ban list
+local TempBannedPlayers = {} --Local ban list
 
 local Explosion = {"287390459"; "287390954"; "287391087"; "287391197"; "287391361"; "287391499"; "287391567";}
 -----------------------------------------------------------------
@@ -41,7 +41,7 @@ local function AccessID(SKP_0,SKP_1)
 	if SKP_0.UserId ~= SKP_1 then
 		SKP_0:kick("Exploit Protocol");
 		warn(SKP_0.Name.." - Potential Exploiter! Case 0-A: Client Tried To Access Server Code");
-		table.insert(_G.TempBannedPlayers, SKP_0);
+		table.insert(TempBannedPlayers, SKP_0);
 	end;
 	return ACS_0;
 end;
@@ -76,7 +76,7 @@ local function secureSettings(Player,Gun,Module)
 	if (compareTables(Module, NewModule) == false) then
 		Player:kick("Exploit Protocol");
 		warn(Player.Name.." - Potential Exploiter! Case 4: Exploiting Gun Stats")	;
-		table.insert(_G.TempBannedPlayers, Player);
+		table.insert(TempBannedPlayers, Player);
 		return false;
 	end;
 	return true;
@@ -166,12 +166,12 @@ local function Damage(SKP_0, SKP_1, SKP_2, SKP_3, SKP_4, SKP_5, SKP_6, SKP_7, SK
 
 		SKP_0:kick("Exploit Protocol")
 		warn(SKP_0.Name.." - Potential Exploiter! Case 1: Tried To Access Damage Event")
-		table.insert(_G.TempBannedPlayers, SKP_0)
+		table.insert(TempBannedPlayers, SKP_0)
 		return;
 	end
 	SKP_0:kick("Exploit Protocol")
 	warn(SKP_0.Name.." - Potential Exploiter! Case 0-B: Wrong Permission Code")
-	table.insert(_G.TempBannedPlayers, SKP_0)
+	table.insert(TempBannedPlayers, SKP_0)
 	return;
 end
 
@@ -296,7 +296,7 @@ Evt.Grenade.OnServerEvent:Connect(function(SKP_0, SKP_1, SKP_2, SKP_3, SKP_4, SK
 	if SKP_6 ~= (ACS_0.."-"..SKP_0.UserId) then
 		SKP_0:kick("Exploit Protocol")
 		warn(SKP_0.Name.." - Potential Exploiter! Case 0-B: Wrong Permission Code")
-		table.insert(_G.TempBannedPlayers, SKP_0)
+		table.insert(TempBannedPlayers, SKP_0)
 		return;
 	end
 
@@ -952,7 +952,7 @@ end
 
 plr.PlayerAdded:Connect(function(player)
 
-	for i,v in ipairs(_G.TempBannedPlayers) do
+	for i,v in ipairs(TempBannedPlayers) do
 		if v == player.Name then
 			player:Kick('Blacklisted')
 			warn(player.Name.." (Temporary Banned) tried to join to server")
